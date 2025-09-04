@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'me-api-playground-production-cb54.up.railway.app'  // backend base
+  baseURL: 'me-api-playground-production-cb54.up.railway.app' 
 });
 
 // attach token automatically
