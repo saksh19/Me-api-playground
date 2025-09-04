@@ -1,19 +1,23 @@
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import mysql from "mysql2/promise";
 
-dotenv.config({ path: '../.env' });
+dotenv.config(); // default root/.env read karega
 
-
-
-const { DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME } = process.env;
+// Railway provides MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT
+const cfg = {
+  host: process.env.MYSQLHOST || "127.0.0.1",
+  user: process.env.MYSQLUSER || "root",
+  password: process.env.MYSQLPASSWORD || "",
+  database: process.env.MYSQLDATABASE || "me_api",
+  port: process.env.MYSQLPORT || 3306,
+};
 
 export const pool = mysql.createPool({
-  host: process.env.DB_HOST || '127.0.0.1',
-  port: process.env.DB_PORT || 3306,
-  user: process.env.DB_USER ,
-  password: process.env.DB_PASS ,
-  database: process.env.DB_NAME || 'me_api',
+  host: cfg.host,
+  user: cfg.user,
+  password: cfg.password,
+  database: cfg.database,
+  port: cfg.port,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0,
 });
