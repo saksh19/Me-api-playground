@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
+    "migrate": "node src/migrate.js",
     "db:init": "node db/init.js",
-    "test": "jest --runInBand",
-    "migrate": "node src/migrate.js"
+    "test": "jest --runInBand"
   },
   "keywords": [],
   "author": "Saksham Khandelwal",
