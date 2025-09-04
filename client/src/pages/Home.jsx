@@ -26,7 +26,7 @@ export default function Home() {
           <p>software developer fresher</p>
           <p>{profile.email}</p>
 
-          <div className="flex gap style={{ padding : 4px}}">
+          <div className="flex gap style={{ gap: 20px }}">
             <a href={profile.github} target="_blank" rel="noreferrer">
               <button className="btn btn-primary">GitHub</button>
             </a>
