@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 
 // pages
 import Home from "./pages/Home";
-import Skills from "./pages/skills";
+import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
