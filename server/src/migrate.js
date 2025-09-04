@@ -2,6 +2,13 @@ import { pool } from './db/pool.js';
 
 (async () => {
   try {
+    console.log("Connecting with:", {
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  db: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT,
+});
+
     // Ensure tables exist before inserting
     await pool.query(`
       CREATE TABLE IF NOT EXISTS users (
