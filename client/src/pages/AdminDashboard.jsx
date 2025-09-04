@@ -28,17 +28,23 @@ export default function AdminDashboard() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const saveProfile = async () => {
+const saveProfile = async () => {
+  try {
     if (profile) {
-      await API.put(`/profile `, form);
+      const res = await API.put("/profile", form);
+      setProfile(res.data);   // update state with new profile
       alert("Profile updated!");
     } else {
-      await API.post("/profile", form);
+      const res = await API.post("/profile", form);
+      setProfile(res.data);
       alert("Profile created!");
     }
     setEditing(false);
-    window.location.reload();
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Error saving profile");
+  }
+};
 
   if (!profile) {
     return (
