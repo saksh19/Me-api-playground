@@ -8,14 +8,14 @@
   
 # SETUP
 -Local Development
- -Install dependencies
-  -Backend:
+• Install dependencies
+• Backend:
     npm install CORS express
--Frontend:
- -npm install
- -Configure environment variables
+• Frontend:
+  npm install
+  Configure environment variables
 
- -Create a .env file in the server folder with the following keys:
+  Create a .env file in the server folder with the following keys:
 
 DB_HOST=admin
 DB_USER=root
@@ -24,12 +24,12 @@ DB_NAME=me_api
 PORT=3000
 JWT_SECRET=<my-secret-key>
 
--Run the backend server
+• Run the backend server
 
  cd server
  npx nodemon index.js
 
--Run the frontend application
+• Run the frontend application
 
 cd client
 npm run dev
@@ -41,7 +41,7 @@ Visit http://localhost:5173 to access the application locally.
 
 # Production Deployment
 
-Build the frontend for production
+• Build the frontend for production
 
 cd client
 npm run build
@@ -49,7 +49,7 @@ npm run build
 drag and drop client/dist folder on netlify to deploy
 
 
-Deploy the backend
+• Deploy the backend
 
 Use Railway to run the server.
 
@@ -77,6 +77,12 @@ Skills
 | id       | INT     | Primary Key       |
 | name     | VARCHAR |  skill name       |
 
+# Known Limitations
 
+• The application has been primarily tested on desktop devices; mobile responsiveness may require further refinement.
+• Some APIs may need additional validation and error handling for edge cases.
+• Authentication tokens have limited expiry; token refresh functionality is not yet implemented.
+• Continuous deployment pipeline and automated testing are still in progress.
+• Certain UI components may require performance optimization for large datasets.
 
 
