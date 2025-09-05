@@ -35,6 +35,7 @@ JWT_SECRET=<my-secret-key>
 • Run the backend server
 
  cd server
+ 
  npx nodemon index.js
 
 • FROENTEND
@@ -42,6 +43,7 @@ JWT_SECRET=<my-secret-key>
 • Run the frontend application
 
 cd client
+
 npm run dev
 
 
@@ -54,6 +56,7 @@ Visit http://localhost:5173 to access the application locally.
 • Build the frontend for production
 
 cd client
+
 npm run build
 
 drag and drop client/dist folder on netlify to deploy
@@ -91,7 +94,7 @@ Skills
 
 • The application has been primarily tested on desktop devices; mobile responsiveness may require further refinement.
 • Some APIs may need additional validation and error handling for edge cases.
-• Authentication tokens have limited expiry; token refresh functionality is not yet implemented.
+• The project is continuously being improved to add more features and enhance existing functionality.
 • Continuous deployment pipeline and automated testing are still in progress.
 • Certain UI components may require performance optimization for large datasets.
 
