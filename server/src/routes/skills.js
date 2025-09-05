@@ -15,18 +15,18 @@ router.get('/top', async (req, res, next) => {
   }
 });
 
-router.put('/update',authenticate, async (req, res, next) => {
+router.put('/update', authenticate, async (req, res, next) => {
   try {
     const skills = req.body;
-    console.log('skills are' , req.body);
+    console.log('skills are', req.body);
+
     if (!Array.isArray(skills)) {
       return res.status(400).json({ error: 'Invalid skills format' });
     }
 
     // 1️⃣ Fetch current skills from DB
-    const existingSkills = await pool.query('SELECT id, name FROM skills');
-
-    console.log("existing",existingSkills);
+    const [existingSkills] = await pool.query('SELECT id, name FROM skills');
+    console.log("existingSkills:", existingSkills);
 
     const existingNames = existingSkills.map(s => s.name);
     const newNames = skills.map(s => s.name);
@@ -35,23 +35,23 @@ router.put('/update',authenticate, async (req, res, next) => {
     const namesToDelete = existingNames.filter(name => !newNames.includes(name));
     if (namesToDelete.length) {
       await pool.query(
-        `DELETE FROM skills WHERE name = ANY($1::text[])`,
+        'DELETE FROM skills WHERE name IN (?)',
         [namesToDelete]
       );
     }
 
     // 3️⃣ Insert new skills that don’t exist yet
     const namesToInsert = newNames.filter(name => !existingNames.includes(name));
-    const insertPromises = namesToInsert.map(name => 
-      pool.query('INSERT INTO skills (name) VALUES ($1)', [name])
-    );
-    await Promise.all(insertPromises);
+    for (const name of namesToInsert) {
+      await pool.query('INSERT INTO skills (name) VALUES (?)', [name]);
+    }
 
     res.json({ message: 'Skills updated successfully' });
   } catch (err) {
-    console.error("Error in /skills/top:", err);
+    console.error("Error in /skills/update:", err);
     next(err);
   }
 });
+
 
 export default router;
