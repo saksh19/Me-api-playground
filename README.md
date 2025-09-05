@@ -70,3 +70,13 @@ Users
 | email    | VARCHAR | Unique user email |
 | password | VARCHAR | Hashed password   |
 
+Skills
+
+| Column   | Type    | Description       |
+| -------- | ------- | ----------------- |
+| id       | INT     | Primary Key       |
+| name     | VARCHAR |  skill name       |
+
+
+
+
