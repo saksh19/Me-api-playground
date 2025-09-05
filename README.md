@@ -92,10 +92,10 @@ Skills
 
 # Known Limitations
 
-• The application has been primarily tested on desktop devices; mobile responsiveness may require further refinement.
-• Some APIs may need additional validation and error handling for edge cases.
-• The project is continuously being improved to add more features and enhance existing functionality.
-• Continuous deployment pipeline and automated testing are still in progress.
-• Certain UI components may require performance optimization for large datasets.
+- The application has been primarily tested on desktop devices; mobile responsiveness may require further refinement.
+- Some APIs may need additional validation and error handling for edge cases.
+- The project is continuously being improved to add more features and enhance existing functionality.
+- Continuous deployment pipeline and automated testing are still in progress.
+- Certain UI components may require performance optimization for large datasets.
 
 
