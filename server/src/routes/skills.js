@@ -24,7 +24,7 @@ router.put('/update',authenticate, async (req, res, next) => {
     }
 
     // 1️⃣ Fetch current skills from DB
-    const { rows: existingSkills } = await pool.query('SELECT id, name FROM skills');
+    const existingSkills = await pool.query('SELECT id, name FROM skills');
 
     console.log("existing",existingSkills);
 
