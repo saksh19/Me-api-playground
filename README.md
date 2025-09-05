@@ -15,9 +15,6 @@
 
     npm install CORS express
     
-• Frontend:
-
-  npm install
   
   Configure environment variables
 
@@ -39,6 +36,8 @@ JWT_SECRET=<my-secret-key>
 
  cd server
  npx nodemon index.js
+
+• FROENTEND
 
 • Run the frontend application
 
