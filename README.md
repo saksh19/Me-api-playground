@@ -24,12 +24,12 @@ DB_NAME=me_api
 PORT=3000
 JWT_SECRET=<my-secret-key>
 
-# Run the backend server
+-Run the backend server
 
  cd server
  npx nodemon index.js
 
-# Run the frontend application
+-Run the frontend application
 
 cd client
 npm run dev
