@@ -17,7 +17,7 @@ router.get('/top', async (req, res, next) => {
 
 router.put('/update',authenticate, async (req, res, next) => {
   try {
-    const { skills } = req.body;
+    const skills = req.body;
     console.log('skills are' , req.body);
     if (!Array.isArray(skills)) {
       return res.status(400).json({ error: 'Invalid skills format' });
