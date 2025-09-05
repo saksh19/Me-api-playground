@@ -98,4 +98,7 @@ Skills
 - Continuous deployment pipeline and automated testing are still in progress.
 - Certain UI components may require performance optimization for large datasets.
 
+# Resume 
+Link - https://drive.google.com/file/d/1X0XctIoHsX7BeACdUy7j-PUbZ0UQoOM2/view?usp=drivesdk
+
 
