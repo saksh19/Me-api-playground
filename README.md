@@ -56,3 +56,15 @@ Use Railway to run the server.
 Configure production environment variables
 
 Set .env values appropriate for production.
+
+# Database Schema
+
+-The project uses the following main tables:
+
+Users
+
+Column | Type	| Description
+id | INT	| Primary Key
+name | VARCHAR | User full name
+email | VARCHAR | Unique user email
+password | VARCHAR | Hashed password
