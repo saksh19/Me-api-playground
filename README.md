@@ -8,20 +8,31 @@
   
 # SETUP
 -Local Development
+
 • Install dependencies
+
 • Backend:
+
     npm install CORS express
+    
 • Frontend:
+
   npm install
+  
   Configure environment variables
 
   Create a .env file in the server folder with the following keys:
 
 DB_HOST=admin
+
 DB_USER=root
+
 DB_PASSWORD=****
+
 DB_NAME=me_api
+
 PORT=3000
+
 JWT_SECRET=<my-secret-key>
 
 • Run the backend server
