@@ -63,8 +63,10 @@ Set .env values appropriate for production.
 
 Users
 
-Column | Type	| Description
-id | INT	| Primary Key
-name | VARCHAR | User full name
-email | VARCHAR | Unique user email
-password | VARCHAR | Hashed password
+| Column   | Type    | Description       |
+| -------- | ------- | ----------------- |
+| id       | INT     | Primary Key       |
+| name     | VARCHAR | User full name    |
+| email    | VARCHAR | Unique user email |
+| password | VARCHAR | Hashed password   |
+
