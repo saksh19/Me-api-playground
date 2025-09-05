@@ -14,7 +14,7 @@ router.get('/top', async (req, res, next) => {
   }
 });
 
-router.put('/update', authenticate, async (req, res, next) => {
+router.put('/update',authenticate, async (req, res, next) => {
   try {
     const { skills } = req.body;
     if (!Array.isArray(skills)) {
